@@ -38,14 +38,12 @@ export async function GET(request: NextRequest) {
 
     if (searchData.bloodType) {
       query = query.where('bloodType', '==', searchData.bloodType);
+    }    if (searchData.isActive !== undefined) {
+      query = query.where('isactive', '==', searchData.isActive);
     }
 
-    if (searchData.isActive !== undefined) {
-      query = query.where('isActive', '==', searchData.isActive);
-    }
-
-    // Ordenar por fecha de creación
-    query = query.orderBy('createdAt', 'desc');
+    // Ordenar por fecha de creación (usar lowercase para índices)
+    query = query.orderBy('createdat', 'desc');
 
     // Obtener total de documentos para paginación
     const totalSnapshot = await query.get();
@@ -162,15 +160,13 @@ export async function POST(request: NextRequest) {
         createErrorResponse('PATIENT_PROFILE_EXISTS', 'Ya existe un perfil de paciente para este usuario'),
         { status: 409 }
       );
-    }
-
-    // Crear el perfil de paciente
+    }    // Crear el perfil de paciente (usar lowercase para consistencia)
     const now = new Date();
     const patientProfile = {
       ...patientData,
-      isActive: true,
-      createdAt: now,
-      updatedAt: now,
+      isactive: true,
+      createdat: now,
+      updatedat: now,
     };
 
     await adminDb.collection('patients').doc(body.uid).set(patientProfile);

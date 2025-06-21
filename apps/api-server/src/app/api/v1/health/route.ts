@@ -1,4 +1,4 @@
-import { firebaseAdmin } from '@altamedica/firebase';
+import { adminDb } from '@altamedica/firebase';
 import { createErrorResponse, createSuccessResponse } from '@altamedica/shared';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     // Firebase health check
     let databaseStatus = 'healthy';
     try {
-      await firebaseAdmin.firestore().collection('health').limit(1).get();
+      await adminDb.collection('health').limit(1).get();
     } catch {
       databaseStatus = 'unhealthy';
     }
