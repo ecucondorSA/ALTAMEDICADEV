@@ -1,0 +1,21 @@
+{
+  "name": "@altamedica/types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types for ALTAMEDICA APIs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "zod": "^3.22.0"
+  }
+}

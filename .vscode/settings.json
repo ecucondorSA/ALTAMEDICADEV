@@ -1,0 +1,113 @@
+{
+  "terminal.integrated.defaultProfile.windows": "PowerShell 7 Standar",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell 7 Standar": {
+      "path": "pwsh.exe",
+      "args": [
+        "-NoLogo"
+      ],
+      "icon": "terminal-powershell",
+      "color": "terminal.ansiCyan"
+    }
+  },
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontFamily": "CascadiaCode Nerd Font",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+
+  // Copilot optimizations
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "typescript": true,
+    "javascript": true,
+    "json": true,
+    "jsonc": true,
+    "powershell": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.chat.welcomeMessage": "always",
+  "github.copilot.chat.useProjectTemplates": true,
+
+  // MCP Configuration
+  "languageServerExample.client.activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:json"
+  ],
+  "languageServerExample.server.path": "./tools/mcp-manager.js",
+
+  // Editor optimizations for MCP
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.wordBasedSuggestions": "allDocuments",
+  "editor.parameterHints.enabled": true,
+  "editor.suggest.preview": true,
+
+  // TypeScript optimizations
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.enabled": true,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+
+  // Files and workspace
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/logs/**": true,
+    "**/.git/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/logs": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/build": true
+  },
+
+  // Extensions recommendations for MCP
+  "extensions.recommendations": [
+    "github.copilot",
+    "github.copilot-chat",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.powershell"
+  ],
+  "compile-hero.disable-compile-files-on-did-save-code": false,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "editor.formatOnSave": true,
+  "git.ignoreLimitWarning": true
+  ,
+  // Configuración para Run Terminal Command
+  "runTerminalCommand.commands": [
+    {
+      "command": "pnpm install",
+      "name": "Instalar dependencias (pnpm)"
+    },
+    {
+      "command": "pnpm dev",
+      "name": "Iniciar servidor de desarrollo (pnpm)"
+    },
+    {
+      "command": "git status",
+      "name": "Ver estado de Git"
+    },
+    {
+      "command": "git pull",
+      "name": "Actualizar desde remoto"
+    },
+    {
+      "command": "git push",
+      "name": "Subir cambios a remoto"
+    }
+  ]
+}

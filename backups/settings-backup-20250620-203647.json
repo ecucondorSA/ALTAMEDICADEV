@@ -1,0 +1,386 @@
+{
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "cSpell.blockCheckingWhenTextChunkSizeGreaterThan": 5000,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "chat.agent.maxRequests": 150,
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiMagenta",
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.nextEditSuggestions.fixes": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.search.keywordSuggestions": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "files.autoSave": "onWindowChange",
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.productIconTheme": "material-product-icons",
+  "editor.fontFamily": "'CascadiaCode Nerd Font', 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.6,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line",
+  "editor.minimap.enabled": true,
+  "editor.minimap.scale": 1,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "typescript": true,
+    "javascript": true,
+    "json": true,
+    "yaml": true,
+    "powershell": true
+  },
+  "yaml.schemas": {
+    "c:\\Users\\Eduardo\\.vscode\\extensions\\continue.continue-1.0.11-win32-x64\\config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "mcp": {
+    "servers": {
+      "my-mcp-server-427292c4": {
+        "url": "http://localhost:3000"
+      },
+      "my-mcp-server-0edccd51": {
+        "type": "stdio",
+        "command": "alta",
+        "args": []
+      },
+      "altamedica-autonomous": {
+        "type": "stdio",
+        "command": "node",
+        "args": ["tools/autonomous-agent-mcp.js"]
+      },
+      "altamedica-gemini-superagent": {
+        "command": "node",
+        "type": "stdio",
+        "cwd": "c:\\Users\\Eduardo\\Documents\\altamedica",
+        "env": {
+          "MEDICAL_MODE": "true",
+          "GEMINI_TEMPERATURE": "0.1",
+          "ALLOW_DANGEROUS_OPS": "false",
+          "GEMINI_MODEL": "gemini-1.5-pro-latest",
+          "MULTI_TENANT": "true",
+          "AUDIT_LOGGING": "true",
+          "MAX_AUTONOMY": "true",
+          "HIPAA_COMPLIANT": "true",
+          "GEMINI_API_KEY": "AIzaSyBz9jcY6rBrN_ciZ7Fp1h2KhzprdygaiUU",
+          "GEMINI_MAX_TOKENS": "4096"
+        },
+        "args": ["tools/altamedica-gemini-enhanced.cjs"]
+      },
+      "zapier": {
+        "url": "https://api.zapier.com/v1/mcp/sse"
+      }
+    }
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "editor.accessibilityPageSize": 1000,
+  "github.copilot.advanced": {
+    "debug.enableLogging": true
+  },
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.localeOverride": "es",
+  "github.copilot.chat.scopeSelection": true,
+  "cSpell.words": [
+    "Altamedica",
+    "anamnesis",
+    "telemedicina",
+    "expediente",
+    "diagnostico",
+    "prescripcion",
+    "HIPAA",
+    "PHI",
+    "clinico",
+    "medico",
+    "paciente",
+    "doctor",
+    "academia",
+    "sanitario",
+    "farmacologia",
+    "patologia",
+    "sintomatologia",
+    "endpunkt",
+    "middleware",
+    "api",
+    "backend",
+    "frontend",
+    "monorepo",
+    "turbo",
+    "pnpm",
+    "microservicio",
+    "triage",
+    "emergencia",
+    "urgencia",
+    "consulta",
+    "cita",
+    "historial",
+    "radiologia",
+    "laboratorio",
+    "biomarcadores",
+    "genetica",
+    "oncologia",
+    "cardiologia",
+    "neurologia",
+    "endocrinologia",
+    "telemetria",
+    "biosensor",
+    "wearable",
+    "iot",
+    "analytics",
+    "dashboard",
+    "postgres",
+    "mongodb",
+    "redis",
+    "authentication",
+    "authorization",
+    "jwt",
+    "oauth",
+    "audit",
+    "compliance",
+    "gdpr",
+    "tsup",
+    "turborepo",
+    "nextjs",
+    "autoimport",
+    "autofix",
+    "errorlens"
+  },
+  "emmet.includeLanguages" {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.workingDirectories": ["apps", "packages"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.turbo": true,
+    "**/temp_*": true,
+    "**/extracted_*": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/temp_*": false,
+    "**/extracted_*": false
+  },
+  "files.associations": {
+    "*.md": "markdown",
+    "*.mdx": "mdx",
+    "*.json": "jsonc"
+  },
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#2E8B57",
+    "statusBar.foreground": "#ffffff",
+    "activityBar.background": "#f0f8ff",
+    "editor.selectionBackground": "#e6f3ff"
+  },
+  "workbench.iconTheme": "vs-seti",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-NoLogo", "-ExecutionPolicy", "RemoteSigned"]
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login"],
+      "icon": "terminal-bash"
+    }
+  },
+  // Configuraciones adicionales para solucionar problemas de ejecución
+  "terminal.integrated.env.windows": {
+    "POWERSHELL_TELEMETRY_OPTOUT": "1"
+  },
+  "terminal.integrated.automationProfile.windows": {
+    "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "args": ["-NoLogo", "-NoProfile"]
+  },
+  "security.workspace.trust.enabled": true,
+  "security.workspace.trust.startupPrompt": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "path-intellisense.mappings": {
+    "@altamedica/": "${workspaceFolder}/packages/",
+    "@apps/": "${workspaceFolder}/apps/"
+  },
+  "jest.jestCommandLine": "pnpm test",
+  "jest.runMode": "on-demand",
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActions.triggerOnFocusChange": true,
+  "github.copilot.chat.completionContext.typescript.mode": "on",
+  "github.copilot.terminal.enableTerminalSuggestions": true,
+  "github.copilot.terminal.enableAutoCompletions": true,
+  "github.copilot.terminal.enableShellIntegration": true,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.windowsEnableConpty": true,
+  "terminal.integrated.windowsUseConptyDll": true,
+  "terminal.integrated.localEchoLatencyThreshold": 30,
+  "terminal.integrated.localEchoExcludePrograms": ["vim", "vi", "nano", "tmux"],
+  "terminal.integrated.suggest.runOnEnter": "exactMatchIgnoreExtension",
+  "terminal.integrated.suggest.builtinCompletions": {
+    "git": true,
+    "npm": true,
+    "yarn": true,
+    "pnpm": true,
+    "code": true,
+    "pwsh": true,
+    "next": true,
+    "prisma": true,
+    "docker": true,
+    "kubectl": true,
+    "turbo": true,
+    "tsup": true
+  },
+  "terminal.integrated.suggest.enableExtendedSuggestions": true,
+  "terminal.integrated.gpuAcceleration": "auto",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.fastScrollSensitivity": 5,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.fontFamily": "'Cascadia Code', 'Consolas', 'DejaVu Sans Mono', monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.minimumContrastRatio": 4.5,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.shellIntegration.showWelcome": "never",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "both",  "terminal.integrated.shellIntegration.history": 1000,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.showActions": "singleTerminal",
+  "terminal.integrated.tabs.showActiveTerminal": "singleTerminalOrNarrow",
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.terminal.clear",
+    "workbench.action.terminal.selectAll"
+  ],
+  "editor.dropIntoEditor.preferences": [],
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showInlineDetails": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.codeFormatting.openBraceOnSameLine": true,
+  "powershell.codeFormatting.newLineAfterOpenBrace": true,
+  "powershell.codeFormatting.newLineAfterCloseBrace": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+  "powershell.codeFormatting.whitespaceAroundOperator": true,
+  "powershell.codeFormatting.whitespaceAfterSeparator": true,  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.debugging.createTemporaryIntegratedConsole": false,
+  "geminicodeassist.inlineSuggestions.enableAuto": false,
+  "compile-hero": {
+    "disable-compile-files-on-did-save-code": false,
+    "javascript-output-directory": "./dist",
+    "javascript-output-toggle": true,
+    "sass-output-directory": "./dist",
+    "sass-output-toggle": true,
+    "scss-output-directory": "./dist",
+    "scss-output-toggle": true,
+    "less-output-directory": "./dist",
+    "less-output-toggle": true,
+    "typescript-output-directory": "./dist",
+    "typescript-output-toggle": true,
+    "typescriptx-output-directory": "./dist",
+    "typescriptx-output-toggle": true,
+    "notification-toggle": false,
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.turbo/**",
+      "**/temp_*/**"
+    ],
+    "watch": ["packages/ui/src/**/*", "apps/**/src/**/*"]
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "clojure.trace.server": "verbose",
+  "editor.fastScrollSensitivity": 40,
+  "workbench.commandPalette.experimental.askChatLocation": "quickChat",
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.commandPalette.history": 500,
+  "workbench.editorLargeFileConfirmation": 1024000,
+  "workbench.experimental.cloudChanges.autoStore": "onShutdown",
+  "workbench.list.defaultFindMode": "filter",
+  "workbench.list.fastScrollSensitivity": 50,
+  "workbench.localHistory.maxFileSize": 2560,
+  "workbench.reduceMotion": "off",
+  "chat.mcp.serverSampling": {
+    "Global en Code: altamedica-autonomous": {
+      "allowedModels": [
+        "github.copilot-chat/gpt-4.1",
+        "github.copilot-chat/claude-3.5-sonnet",
+        "github.copilot-chat/claude-3.7-sonnet",
+        "github.copilot-chat/claude-3.7-sonnet-thought",
+        "github.copilot-chat/claude-sonnet-4",
+        "github.copilot-chat/gemini-2.0-flash-001",
+        "github.copilot-chat/gemini-2.5-pro",
+        "github.copilot-chat/gpt-4o",
+        "github.copilot-chat/o1",
+        "github.copilot-chat/o3-mini",
+        "github.copilot-chat/o4-mini"
+      ]
+    }
+  },
+  "explorer.confirmDelete": false
+}

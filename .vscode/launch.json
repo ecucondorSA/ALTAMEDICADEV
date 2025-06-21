@@ -1,0 +1,97 @@
+{
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos.
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug API Server",
+      "program": "${workspaceFolder}/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/apps/api-server",
+      "env": {
+        "NODE_OPTIONS": "--inspect",
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "restart": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Doctors App",
+      "program": "${workspaceFolder}/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/apps/doctors",
+      "env": {
+        "NODE_OPTIONS": "--inspect",
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "restart": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Patients App",
+      "program": "${workspaceFolder}/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/apps/patients",
+      "env": {
+        "NODE_OPTIONS": "--inspect",
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "restart": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Companies App",
+      "program": "${workspaceFolder}/node_modules/.bin/next",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/apps/companies",
+      "env": {
+        "NODE_OPTIONS": "--inspect",
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "restart": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Tests",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Process",
+      "processId": "${command:PickProcess}",
+      "restart": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch All Apps",
+      "configurations": [
+        "Debug API Server",
+        "Debug Doctors App",
+        "Debug Patients App",
+        "Debug Companies App"
+      ],
+      "stopAll": true
+    }
+  ]
+}

@@ -1,27 +1,128 @@
 {
-  "name": "altamedicadev",
-  "version": "0.1.0",
+  "name": "altamedica-apis",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ALTAMEDICA Medical APIs - Professional healthcare management system",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9.0.0"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:api": "cd apps/api-server && pnpm dev",
+    "dev:companies": "cd apps/companies && pnpm dev",
+    "dev:doctors": "cd apps/doctors && pnpm dev",
+    "dev:patients": "cd apps/patients && pnpm dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json}\"",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:coverage": "turbo run test:coverage",
+    "test:e2e": "turbo run test:e2e",
+    "firebase:emulators": "firebase emulators:start",
+    "firebase:deploy": "firebase deploy",
+    "db:seed": "tsx tools/seed-database.ts",
+    "db:migrate": "tsx tools/migrate-database.ts",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "clean:all": "turbo run clean && rm -rf node_modules apps/*/node_modules packages/*/node_modules",
+    "postinstall": "turbo run postinstall",
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "eslint-config-next": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "firebase-tools": "^12.9.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "tsx": "^4.20.3",
+    "turbo": "^2.5.4",
+    "typescript": "5.9.0-dev.20250620",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.7.0",
+    "next": "15.3.4",
+    "react": "19",
+    "react-dom": "19",
+    "zod": "^3.25.67"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".next/**",
+          "!.next/cache/**",
+          "dist/**"
+        ]
+      },
+      "dev": {
+        "cache": false,
+        "persistent": true
+      },
+      "lint": {
+        "outputs": []
+      },
+      "lint:fix": {
+        "outputs": []
+      },
+      "type-check": {
+        "dependsOn": [
+          "^type-check"
+        ],
+        "outputs": []
+      },
+      "test": {
+        "outputs": [
+          "coverage/**"
+        ]
+      },
+      "test:watch": {
+        "cache": false,
+        "persistent": true
+      },
+      "test:e2e": {
+        "dependsOn": [
+          "build"
+        ],
+        "outputs": []
+      },
+      "clean": {
+        "cache": false
+      }
+    }
   }
 }

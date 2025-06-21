@@ -1,0 +1,180 @@
+{
+  "mcpServers": {
+    "codebase-intelligence": {
+      "command": "node",
+      "args": ["tools/codebase-intelligence-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "🧠 Análisis ultrarrápido de repositorio - SUPERA WINDSURF RIPTIDE",
+      "priority": 1
+    },
+    "ai-flow-orchestrator": {
+      "command": "node", 
+      "args": ["tools/ai-flow-orchestrator-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "🤖 Workflows inteligentes y dual-mode AI - SUPERA WINDSURF CASCADE",
+      "priority": 2
+    },
+    "multi-agent-composer": {
+      "command": "node",
+      "args": ["tools/multi-agent-composer-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "👥 Scaffolding multi-agente - SUPERA CURSOR COMPOSER",
+      "priority": 3
+    },
+    "context-memory": {
+      "command": "node",
+      "args": ["tools/context-memory-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true,
+        "prompts": true
+      },
+      "description": "🧠 Persistencia adaptativa y memoria contextual - SUPERIOR A AMBOS",
+      "priority": 4
+    },
+    "smart-completion": {
+      "command": "node",
+      "args": ["tools/smart-completion-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "⚡ FIM y completions predictivas - SUPERA WINDSURF FIM & CURSOR",
+      "priority": 5
+    },
+    "project-scaffolding": {
+      "command": "node",
+      "args": ["tools/project-scaffolding-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "🏗️ Arquitectura inteligente - SUPERA SCAFFOLDING DE AMBOS",
+      "priority": 6
+    },
+    "medical-mcp-server": {
+      "command": "node",
+      "args": ["tools/medical-mcp-server.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "🏥 Servidor MCP especializado en medicina",
+      "priority": 7
+    },
+    "patient-simulator": {
+      "command": "node",
+      "args": ["tools/patient-simulator-mcp.js"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "capabilities": {
+        "tools": true,
+        "resources": true
+      },
+      "description": "👨‍⚕️ Simulador de pacientes para testing médico",
+      "priority": 8
+    }
+  },
+  "globalSettings": {
+    "timeout": 30000,
+    "retries": 3,
+    "logLevel": "info",
+    "enableTelemetry": true,
+    "cacheEnabled": true,
+    "maxConcurrentTools": 5
+  },
+  "integrations": {
+    "vscode": {
+      "enabled": true,
+      "autoStart": true,
+      "showNotifications": true,
+      "statusBarEnabled": true
+    },
+    "copilot": {
+      "enabled": true,
+      "enhancedMode": true,
+      "contextSharing": true,
+      "smartSuggestions": true
+    }
+  },
+  "security": {
+    "enableSandbox": true,
+    "allowedPaths": [
+      ".",
+      "src",
+      "tools",
+      "apps",
+      "packages"
+    ],
+    "deniedPaths": [
+      "node_modules",
+      ".git",
+      ".env"
+    ],
+    "maxMemoryUsage": "512MB",
+    "maxCpuUsage": "50%"
+  },
+  "performance": {
+    "caching": {
+      "enabled": true,
+      "ttl": 3600,
+      "maxSize": "100MB"
+    },
+    "compression": {
+      "enabled": true,
+      "algorithm": "gzip"
+    },
+    "pooling": {
+      "enabled": true,
+      "maxConnections": 10
+    }
+  },
+  "monitoring": {
+    "metrics": {
+      "enabled": true,
+      "interval": 60000,
+      "retention": "7d"
+    },
+    "healthCheck": {
+      "enabled": true,
+      "interval": 30000,
+      "timeout": 5000
+    },
+    "logging": {
+      "level": "info",
+      "format": "json",
+      "rotation": "daily"
+    }
+  }
+}

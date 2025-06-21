@@ -1,0 +1,24 @@
+{
+  "name": "@altamedica/firebase",
+  "version": "1.0.0",
+  "description": "Shared Firebase configuration and utilities for ALTAMEDICA APIs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "firebase": "^10.7.0",
+    "firebase-admin": "^12.0.0",
+    "@altamedica/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.10.0"
+  }
+}

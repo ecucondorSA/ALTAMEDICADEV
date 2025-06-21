@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@altamedica/types": ["./packages/types/src"],
+      "@altamedica/firebase": ["./packages/firebase/src"],
+      "@altamedica/shared": ["./packages/shared/src"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

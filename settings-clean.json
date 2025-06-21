@@ -1,0 +1,190 @@
+{
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 🏥 ALTAMEDICA VS Code Settings - Clean & Optimized Configuration
+  // Configuración limpia y optimizada para desarrollo médico con Copilot
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  // ──── GitHub Copilot Configuration ────
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "typescript": true,
+    "javascript": true,
+    "json": true,
+    "yaml": true,
+    "powershell": true
+  },
+  "github.copilot.chat.localeOverride": "es",
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.terminal.enableTerminalSuggestions": true,
+  "github.copilot.terminal.enableAutoCompletions": true,
+  "github.copilot.terminal.enableShellIntegration": true,
+
+  // ──── Editor Settings ────
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.4,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [80, 120],
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnEnter": "on",
+
+  // ──── Files & Search ────
+  "files.autoSave": "onFocusChange",
+  "files.associations": {
+    "*.md": "markdown",
+    "*.mdx": "mdx",
+    "*.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.turbo": true
+  },
+
+  // ──── Terminal Configuration ────
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-NoLogo", "-ExecutionPolicy", "RemoteSigned"]
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login"],
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.fontFamily": "'Cascadia Code', Consolas, monospace",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.shellIntegration.showWelcome": "never",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+
+  // ──── TypeScript & JavaScript ────
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+
+  // ──── ESLint & Formatting ────
+  "eslint.workingDirectories": ["apps", "packages"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ──── Workbench & UI ────
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.commandPalette.history": 50,
+  "workbench.list.defaultFindMode": "filter",
+  "explorer.confirmDelete": false,
+
+  // ──── Git ────
+  "git.openRepositoryInParentFolders": "always",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // ──── Security & Trust ────
+  "security.workspace.trust.enabled": true,
+  "security.workspace.trust.startupPrompt": "once",
+
+  // ──── PowerShell ────
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.debugging.createTemporaryIntegratedConsole": false,
+  "powershell.codeFormatting.preset": "OTBS",
+
+  // ──── ALTAMEDICA Specific ────
+  "path-intellisense.mappings": {
+    "@altamedica/": "${workspaceFolder}/packages/",
+    "@apps/": "${workspaceFolder}/apps/"
+  },
+
+  // ──── Custom Words for Spell Check ────
+  "cSpell.words": [
+    "Altamedica",
+    "anamnesis",
+    "telemedicina",
+    "expediente",
+    "diagnostico",
+    "prescripcion",
+    "HIPAA",
+    "PHI",
+    "clinico",
+    "medico",
+    "paciente",
+    "doctor",
+    "monorepo",
+    "turbo",
+    "pnpm",
+    "microservicio",
+    "triage",
+    "emergencia",
+    "urgencia",
+    "consulta",
+    "cita",
+    "historial",
+    "nextjs",
+    "autoimport",
+    "autofix",
+    "errorlens"
+  ],
+
+  // ──── Language Specific ────
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  }
+}
